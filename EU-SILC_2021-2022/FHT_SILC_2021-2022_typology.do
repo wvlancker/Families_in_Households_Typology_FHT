@@ -90,7 +90,7 @@ lab val fht7_org fht7org_l
 
 egen dc = rowtotal(child*_dep)
 egen depchild = max(dc), by(country year hid)
-
+// dependent_child is redundant 
 egen dependent_child = max(depchild), by(country year hid)
 lab var dependent_child "Number of dependent children in the HH"
 
